@@ -1,6 +1,6 @@
-Mutant,cm
-Y4I,1.311
-pgaR::TN5,1.828
-phaR::TN5,1.361
-phaI::pKNOCK3464,1.403
-igiD::TN5,1.144
+Mutant,cm,sd
+Y4I,1.311,
+pgaR::TN5,1.828,
+phaR::TN5,1.361,
+phaI::pKNOCK3464,1.403,
+igiD::TN5,1.144,
