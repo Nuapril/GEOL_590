@@ -1,0 +1,11 @@
+####R package####
+- 1 (or more) functions
+	- roxygen type documentation, essentially a definition 
+- vignette 
+	-Rmd file explaining and demonstracing how to use package 
+
+###Data Analysis Project####
+- Rmd file that implements and explains code 
+- well written code (more than trivial example) 
+	- should include some functions to wrap what you're doing (ex. split-apply-combine)
+	- R functions so that it would be resusable, essentially tunring it into a package 

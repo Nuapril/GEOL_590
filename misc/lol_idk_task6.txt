@@ -1,0 +1,208 @@
+> setwd(C:/Users/April/Documents/GEOL_590/data)
+Error: unexpected '/' in "setwd(C:/"
+> setwd("C:/Users/April/Documents/GEOL_590/data")
+> df <- read.csv("motility.csv")
+> View(df)
+> ?aov
+> fit <-aov(y~A, data=df)
+Error in eval(expr, envir, enclos) : object 'y' not found
+> y <- c(1.311, 1.828, 1.361, 1.403, 1.144)
+> A <-c(Y4I, pgaR::TN5, phaR::TN5, phaI::pKNOCK3464, igiD::TN5)
+Error: object 'Y4I' not found
+> A <-c("Y4I, pgaR::TN5, phaR::TN5, phaI::pKNOCK3464, igiD::TN5")
+> fit <-aov(y~A, data=df)
+Error in model.frame.default(formula = y ~ A, data = df, drop.unused.levels = TRUE) : 
+  variable lengths differ (found for 'A')
+> y4i1 <- c(0.8, 0.8, 0.8)
+> y4i2 <- c(0.7, 0.7 , 0.8)
+> y4i3 <- c(1.4, 1.4, 1.35)
+> y4i1<- c(1.4, 1.3, 1.2)
+> y4i2 <- c(1.3, 1.2, 1.25)
+> y4i <- c(y4i1, y4i2, y4i3)
+> n <- rep(3,3)
+> group <- rep(1:3, n)
+> data <- data.frame(y = y4i, group = factor (group))
+> View(data)
+> fit <-lm(y4i ~ group, data)
+> anova(fit)
+Analysis of Variance Table
+
+Response: y4i
+          Df   Sum Sq   Mean Sq F value Pr(>F)
+group      2 0.027222 0.0136111  3.0625 0.1212
+Residuals  6 0.026667 0.0044444               
+> motility <- read.csv("motility2.csv")
+> View(motility)
+> View(motility)
+> motility <- read.csv("motility2.csv")
+> motility <- read.csv("motility3.csv")
+> motility <- read.csv("motility3.csv")
+> motility <- read.csv("motility3.csv")
+> View(motility)
+> y4i1 <- motility[1:3, ]
+> View(y4i1)
+> y4i2 <- motility [4:6,]
+> View(y4i2)
+> y4i3 <- motility [7:9,]
+> pgar1 <- motility [10:12, ]
+> pgar2 <- motility [13:15,]
+> fit <- aov(cm~Sample, data = motility)
+> View(fit)
+Error in View : cannot coerce class "c("aov", "lm")" to a data.frame
+> summary(fit)
+            Df Sum Sq Mean Sq F value Pr(>F)
+Sample      40  2.659 0.06647   13.29  0.215
+Residuals    1  0.005 0.00500               
+3 observations deleted due to missingness
+> df <- read.csv("motility.csv")
+> fit <- aov(cm~mutant, data = df)
+Error in eval(expr, envir, enclos) : object 'mutant' not found
+> fit <- aov(cm~Mutant, data = df)
+> summary(fit)
+            Df Sum Sq Mean Sq
+Mutant       4 0.2577 0.06443
+> print(model.tables(fit, "means"), digits =3 )
+Tables of means
+Grand mean
+       
+1.4094 
+
+ Mutant 
+Mutant
+       igiD::TN5        pgaR::TN5 phaI::pKNOCK3464        phaR::TN5              Y4I 
+           1.144            1.828            1.403            1.361            1.311 
+> boxplot(cm~Mutant, data = motility)
+Error in eval(expr, envir, enclos) : object 'Mutant' not found
+> boxplot(cm~Sample, data = motility)
+> boxplot("means", data = motility)
+Error in x[floor(d)] + x[ceiling(d)] : 
+  non-numeric argument to binary operator
+> boxplot(cm~Sample, data = "means")
+Error in eval(predvars, data, env) : 
+  invalid 'envir' argument of type 'character'
+> plot<- ggplot(motility, aes( x= Sample, y = cm, fill = type))+ geom_bar(stat = "identity", position = "dodge")+ xlab ("Motility in cm")+ ylab("Mutants") + scale_y_continuous(expand = c(0, 0)) + ylim(c(0,max(motility$mean*1.5)))+ geom_errorbar(aes(ymax = hline, ymin = hline), width = 0.45)
+Error: could not find function "ggplot"
+> 
+> 
+> 
+> library(ggplot2)
+> plot<- ggplot(motility, aes( x= Sample, y = cm, fill = type))+ geom_bar(stat = "identity", position = "dodge")+ xlab ("Motility in cm")+ ylab("Mutants") + scale_y_continuous(expand = c(0, 0)) + ylim(c(0,max(motility$mean*1.5)))+ geom_errorbar(aes(ymax = hline, ymin = hline), width = 0.45)
+Scale for 'y' is already present. Adding another scale for 'y', which will replace the existing
+scale.
+Warning message:
+In max(motility$mean * 1.5) :
+  no non-missing arguments to max; returning -Inf
+> 
+> 
+> 
+> motility <- read.csv("motility3.csv")
+> plot<- ggplot(motility, aes( x= Sample, y = cm, fill = type))+ geom_bar(stat = "identity", position = "dodge")+ xlab ("Motility in cm")+ ylab("Mutants") + scale_y_continuous(expand = c(0, 0)) + ylim(c(0,max(motility$mean*1.5)))+ geom_errorbar(aes(ymax = hline, ymin = hline), width = 0.45)
+Scale for 'y' is already present. Adding another scale for 'y', which will replace the existing
+scale.
+Warning message:
+In max(motility$mean * 1.5) :
+  no non-missing arguments to max; returning -Inf
+> 
+> 
+> 
+> plot<- ggplot(motility, aes( x= Sample, y = cm, fill = type))+ geom_bar(stat = "identity", position = "dodge")+ xlab ("Motility in cm")+ ylab("Mutants") + scale_y_continuous(expand = c(0, 0)) + ylim(c(0,max(motility$mean)))+ geom_errorbar(aes(ymax = hline, ymin = hline), width = 0.45)
+Scale for 'y' is already present. Adding another scale for 'y', which will replace the existing
+scale.
+Warning message:
+In max(motility$mean) : no non-missing arguments to max; returning -Inf
+> 
+> 
+> 
+> means <- aggregate(motility$cm)
+Error in match.fun(FUN) : argument "FUN" is missing, with no default
+> means <- aggregate(motility$cm, FUN = mean)
+Error in aggregate.data.frame(as.data.frame(x), ...) : 
+  argument "by" is missing, with no default
+> means <- aggregate(motility$cm, by = motility$Sample, FUN = mean)
+Error in aggregate.data.frame(as.data.frame(x), ...) : 
+  'by' must be a list
+> means <- aggregate(motility$cm, by = list( motility$Sample), FUN = mean)
+> View(means)
+> motility <- read.csv("motility3.csv")
+> means <- aggregate(motility$cm, by = list( motility$Sample), FUN = mean)
+> View(means)
+> motility <- read.csv("motility3.csv")
+> means <- aggregate(motility$cm, by = list( motility$Sample), FUN = mean)
+> motility <- read.csv("motility3.csv")
+> means <- aggregate(motility$cm, by = list( motility$Sample), FUN = mean)
+> plot<- barplot(means, main = "Motility", xlab = "Mutants", ylab = ("cm"))
+Error in barplot.default(means, main = "Motility", xlab = "Mutants", ylab = ("cm")) : 
+  'height' must be a vector or a matrix
+> plot<- barplot(means, main = "Motility", xlab = "Mutants")
+Error in barplot.default(means, main = "Motility", xlab = "Mutants") : 
+  'height' must be a vector or a matrix
+> plot<- barplot(means, main = "Motility", xlab = "Mutants", height = cm)
+Error in barplot.default(means, main = "Motility", xlab = "Mutants", height = cm) : 
+  'height' must be a vector or a matrix
+In addition: Warning message:
+In mean.default(width) : argument is not numeric or logical: returning NA
+> plot<- barplot(means$x, main = "Motility", xlab = "Mutants", height = cm)
+Error in barplot.default(means$x, main = "Motility", xlab = "Mutants",  : 
+  'height' must be a vector or a matrix
+> plot2<- ggplot(means, aes (Group.1, y = cm))+geom_bar(stat = "identity", position = "dodge")
+> ggplot(means, aes (Group.1, y = cm))+geom_bar(stat = "identity", position = "dodge")
+Don't know how to automatically pick scale for object of type function. Defaulting to continuous.
+Error in (function (..., row.names = NULL, check.rows = FALSE, check.names = TRUE,  : 
+  arguments imply differing number of rows: 5, 0
+> table(means$x)
+
+0.788888888888889  1.14444444444444  1.31111111111111  1.37142857142857              1.39 
+                1                 1                 1                 1                 1 
+> table (means)
+       x
+Group.1 0.788888888888889 1.14444444444444 1.31111111111111 1.37142857142857 1.39
+   igiD                 0                1                0                0    0
+   pgaR                 1                0                0                0    0
+   phaI                 0                0                0                0    1
+   phaR                 0                0                0                1    0
+   Y4I                  0                0                1                0    0
+> means$x
+[1] 1.1444444 0.7888889 1.3900000 1.3714286 1.3111111
+> ggplot(means$x, aes (Group.1, y = cm))+geom_bar(stat = "identity", position = "dodge")
+Error: ggplot2 doesn't know how to deal with data of class numeric
+> qplot(x = Mutant, y = cm, fill= x, data = means, geom = "bar", stats = "identity", position = "dodge")
+Warning: Ignoring unknown parameters: stats
+Don't know how to automatically pick scale for object of type function. Defaulting to continuous.
+Error in eval(expr, envir, enclos) : object 'Mutant' not found
+In addition: Warning message:
+`position` is deprecated 
+> qplot(x = Group.1, y = cm, fill= x, data = means, geom = "bar", stat = "identity", position = "dodge")
+Don't know how to automatically pick scale for object of type function. Defaulting to continuous.
+Error in (function (..., row.names = NULL, check.rows = FALSE, check.names = TRUE,  : 
+  arguments imply differing number of rows: 5, 0
+In addition: Warning messages:
+1: `stat` is deprecated 
+2: `position` is deprecated 
+> ggplot(data=means, aes (x = Group.1, y = x))+ geom_bar(stat="identity", position = "dodge")
+> ggplot(data=means, aes (x = Group.1, y = x))+ geom_bar(stat="identity", position = "dodge")+ geom_text( aes (x = "Mutants", y = "cm"))
+Error: Discrete value supplied to continuous scale
+> ggplot(data=means, aes (x = Group.1, y = x))+ geom_bar(stat="identity", position = "dodge")
+> ggplot(data=means, aes (x = Group.1, y = x))+ geom_bar(stat="identity", position = "dodge")+ geom_errorbar(aes(ymax = hline, ymin = hline), width = 0.45)
+Error in eval(expr, envir, enclos) : object 'hline' not found
+> ggplot(data=means, aes (x = Group.1, y = x))+ geom_bar(stat="identity", position = "dodge")+ geom_errorbar(aes(ymax = x+sd, ymin = x-sd), width = 0.45)
+Error in x + sd : non-numeric argument to binary operator
+> v <- aggregate(motility$cm, by = list( motility$Sample), FUN = function(x) c(mean = mean(x), sd = sd(x))
++ v <- aggregate(motility$cm, by = list( motility$Sample), FUN = function(x) c(mean = mean(x), sd = sd(x))
+Error: unexpected symbol in:
+"v <- aggregate(motility$cm, by = list( motility$Sample), FUN = function(x) c(mean = mean(x), sd = sd(x))
+v"
+> v <- aggregate(motility$cm, by = list( motility$Sample), FUN = function(x) c(mean = mean(x), sd = sd(x))
++ v <- aggregate(motility$cm, by = list( motility$Sample), FUN = function(x) c(mean = mean(x), sd = sd(x)))
+Error: unexpected symbol in:
+"v <- aggregate(motility$cm, by = list( motility$Sample), FUN = function(x) c(mean = mean(x), sd = sd(x))
+v"
+> v <- aggregate(motility$cm, by = list( motility$Sample), FUN = function(x) c(mean = mean(x), sd = sd(x)))
+> View(v)
+> v <- aggregate(motility$cm, by = list( motility$Sample), FUN = function(cm) c(mean = mean(cm), sd = sd(cm)))
+> v <- aggregate(motility$cm, by = list( motility$Sample), FUN = function(motility$cm) c(mean = mean(cm), sd = sd(cm)))
+Error: unexpected '$' in "v <- aggregate(motility$cm, by = list( motility$Sample), FUN = function(motility$"
+> library("stats", lib.loc="C:/Program Files/R/R-3.3.2/library")
+> detach("package:stats", unload=TRUE)
+Warning message:
+‘stats’ namespace cannot be unloaded:
+  namespace ‘stats’ is imported by ‘munsell’, ‘ggplot2’, ‘tibble’, ‘plyr’ so cannot be unloaded 

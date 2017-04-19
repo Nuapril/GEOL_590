@@ -1,0 +1,26 @@
+# H1 Title
+Author: April Armes
+
+# H2 Introduction
+Quorum sensing (QS) allows bacterial populations to coordinate gene expression in a cell density dependent manner through the production and regulation of small diffusible signaling molecules (1, 2). A prevalent class of signaling molecules in proteobacteria are N-acylhomoserine lactones (AHLs) (3). AHL-based QS typically involves a two-component system consisting of a transcriptional regulator (denoted by -R) and an AHL synthase (designated as -I) (4, 5). In members of the roseobacter clade, AHL-based QS systems are hypothesized to facilitate surface colonization and gain a competitive advantage against other organisms through the production of secondary metabolites (6-12). 
+The roseobacter clade is an extremely abundant, diverse, and metabolically active lineage of marine alphaproteobacteria (13). Members of the roseobacter clade make up a large portion of coastal marine bacteria and readily out-compete other marine bacteria for surface niches (7, 14-19). One member of the roseobacter clade, *Phaeobacter* spp. Y4I, produces a dark blue, antimicrobial secondary metabolite called indigoidine. Indigoidine production is both surface attachment and QS dependent. Y4I possesses two QS systems, pgaRI and phaRI, that are involved in regulating the production of indigoidine (20). As surface colonization is a prerequisite to antimicrobial biosynthesis in this strain, Y4I serves as an excellent model organism to study the underlying regulatory mechanisms that allow a competitive advantage against other organisms. 
+Previous studies in our lab have shown that a disruption via a Tn5-KmR insertion in either of the AHL-based QS transcriptional regulators in Y4I, *phaR* and *pgaR*, influence indigoidine production. The *phaR* mutant results in a delayed pigmentation, whereas, disruption in *pgaR* results in the abolishment of pigment production (10, 20). While both QS systems are necessary for wildtype (WT) levels of indigoidine expression, a disruption in *pgaR* suggests this pathway is more directly involved in indigoidine production. However, recent genomic analysis of Y4I suggests that the regulatory mechanisms involved in indigoidine production may act in a hierarchal manner as is the case with *Dinoroseobacter shibae*  (21). In order to elucidate the regulatory networks responsible for the competitive advantage provided by indigoidine in Y4I, I have focused on obtaining AHL synthase (i.e., *phaI* and *pgaI*) mutants and characterizing their phenotype in terms of motility and antagonistic behavior.
+
+# H2 Methods
+# H3 AHL Synthase Mutants
+Mutants were generated using the pKNOCK suicide vector system. Using pKNOCK-KmR, we cloned a ~300 bp fragment of our target gene into the vector creating pKNOCK3464. This vector was then transformed into a compepent donor cell, BW20767. The contruct was incorporated into Y4I Through conjugation with the donor strain. Because Y4I does not contain the *pir* gene, an essential gene for pKNOCK replication, the construct will insert into the genome using site specific homologous recombination.   
+
+# H3 Characterization of AHL Synthase Mutants
+
+# H4 Motility Assays
+To assess the motility of *phaI*::pKNOCK we have performed a motility assay. To determine the ability of *phaI*::pKNOCK3634 to inhibit other marine bacterium we have performed an inhibition assay against *Vibrio fischeri*. 
+
+
+# H4 Inhibtion Assays  
+
+# H2 Results and Discussion 
+
+
+```{r}
+ENTER CODE HERE
+```

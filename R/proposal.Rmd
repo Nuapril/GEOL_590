@@ -1,0 +1,19 @@
+---
+title: "Final Project Proposal" "
+output: 
+html_notebook
+html_notebook: default   
+Author: "April Armes""
+---
+Who will be participating? Individual (self)
+Will the project will be a data analysis project or a package? Data analysis
+Which git workflow from the Chacon text you will use? Centralized Workflow 
+What will the project be about? The project uses real world qPCR data to analyze the expression of the gene igiD in Y4I mutants to determine whether knocking out specific genes effects the expression of igiD, the indigoidine synthesis gene. This work will provide insight into how quorum sensing regulated indigodine production. Following data analysis, a bar chart of igiD expression in each mutant wil be produced and normalized to three reference genes.Functions that assist with qPCR data analysis make also be created in this project. 
+
+```{r}
+plot(cars)
+```
+
+Add a new chunk by clicking the *Insert Chunk* button on the toolbar or by pressing *Ctrl+Alt+I*.
+
+When you save the notebook, an HTML file containing the code and output will be saved alongside it (click the *Preview* button or press *Ctrl+Shift+K* to preview the HTML file).

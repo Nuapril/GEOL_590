@@ -1,0 +1,18 @@
+---
+title: "A Function to Calculate the Geometric Mean of a Vector to the nth Degree""
+author: "April Armes"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Vignette Title}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+Package is installable via install_github("Nuapril/task_09/task9r")
+
+At its core, this function calculates the geometic mean of a vector to the nth degree and based on that number will return the geometric mean. 
+
+When running this function, the used inputs a vector of any length. This inputted vector will serve as the base of the mean. The numbers in the vector will all be added together and divided by the number of values in the vector. 
+
+

@@ -1,0 +1,21 @@
+Package: task9r
+Title: Task 9 Package
+Version: 0.0.0.9000
+Authors@R: person("April", "Armes", email = "amitch51@vols.utk.edu", role = c("aut", "cre"))
+Description: This package accomplishes task 9 in the following ways: 
+    It exists in its own repo on github named task_09.
+    It is installable using devtools::install_github().
+    Its function is to caculate the mean of a vector.
+    This is the informative description file.
+    It has one unit test. 
+    And it contains a vignette taht talks about what the package does. 
+Depends: R (>= 3.3.2)
+License: CC0
+Encoding: UTF-8
+LazyData: true
+Imports: dplyr
+RoxygenNote: 6.0.1
+Suggests: knitr,
+    rmarkdown,
+    testthat
+VignetteBuilder: knitr
