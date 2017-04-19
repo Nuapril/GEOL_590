@@ -11,7 +11,7 @@
 library (tidyverse)
 library(dplyr)
 library (ggplot2)
-library(nycflights)
+library(nycflights13)
 library(babynames)
 
 ##Using the nycflights13::weather: 
@@ -34,7 +34,7 @@ wind.speed <- nycflights13::weather %>%
 median.wind_speed <- nycflights13::weather%>% 
   group_by(wind_dir, origin) %>%
   select (wind_dir, origin, wind_speed) %>%
-  filter(wind_speed < mean.sd.wind_speed$mean.wind_speed +mean.sd.wind_speed$sd.wind_speed| wind_speed > mean.sd.wind_speed$mean.wind_speed +mean.sd.wind_speed$sd.wind_speed) %>%
+  filter(wind_speed < mean.sd.wind_speed$mean.wind_speed + mean.sd.wind_speed$sd.wind_speed| wind_speed > mean.sd.wind_speed$mean.wind_speed +mean.sd.wind_speed$sd.wind_speed) %>%
   summarise((med.wind_speed = median(wind_speed, na.rm = TRUE)))%>%
   arrange (origin)
 
@@ -69,7 +69,7 @@ EWR.flights <-airline.flights %>%
   select (name, flight, month) %>%
   group_by(month, name)%>%
   
-  # want to use mutate function but couldn't figure out how
+  #want to use mutate function but couldn't figure out how
   #mutate(airline.flights, x = flights/month)
   #Error in mutate_impl(.data, dots):impossible to replicate vector of size 20
   
@@ -102,9 +102,8 @@ print(freq.plot)
 
 #Write task that involves some of the functions on the Data Wrangling Cheat Sheet and execute it.
 
-qPCR <- read.csv('C:\Users\April\Documents\Research\data_analysis\qpcr.csv') #need to make relavtive path
-#Error: '\U' used without hex digits in character string starting "'C:\U"
+qPCR <- read.csv('../Research/data_analysis/qpcr.csv') 
 qPCR_summ <- group_by(qPCR, Rep) %>%
-  summarise(mean.NQR = mean(NQR, na.rm = TRUE), stdev.NQR = sd(NQR, na.rm = TRUE))
+  summarise(mean.NQR = mean(NRQ, na.rm = TRUE), stdev.NQR = sd(NRQ, na.rm = TRUE))
 
 print(qPCR_summ)
