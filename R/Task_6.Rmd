@@ -4,24 +4,24 @@ output:
   html_document: 
     keep_md: TRUE
   html_notebook: default   
-Author: April Armes
+Author: "April Armes"
 ---
 ## Introduction
 Quorum sensing (QS) allows bacterial populations to coordinate gene expression in a cell density dependent manner through the production and regulation of small diffusible signaling molecules. A prevalent class of signaling molecules in proteobacteria are N-acylhomoserine lactones (AHLs). AHL-based QS typically involves a two-component system consisting of a transcriptional regulator (denoted by -R) and an AHL synthase (designated as -I). In members of the roseobacter clade, AHL-based QS systems are hypothesized to facilitate surface colonization and gain a competitive advantage against other organisms through the production of secondary metabolites. 
 The roseobacter clade is an extremely abundant, diverse, and metabolically active lineage of marine alphaproteobacteria. Members of the roseobacter clade make up a large portion of coastal marine bacteria and readily out-compete other marine bacteria for surface niches. One member of the roseobacter clade, *Phaeobacter* spp. Y4I, produces a dark blue, antimicrobial secondary metabolite called indigoidine. Indigoidine production is both surface attachment and QS dependent. Y4I possesses two QS systems, *pgaRI* and *phaRI*, that are involved in regulating the production of indigoidine. As surface colonization is a prerequisite to antimicrobial biosynthesis in this strain, Y4I serves as an excellent model organism to study the underlying regulatory mechanisms that allow a competitive advantage against other organisms. 
 Previous studies in our lab have shown that a disruption via a Tn5-KmR insertion in either of the AHL-based QS transcriptional regulators in Y4I, *phaR* and *pgaR*, influence indigoidine production. The *phaR* mutant results in a delayed pigmentation, whereas, disruption in *pgaR* results in the abolishment of pigment production. While both QS systems are necessary for wildtype (WT) levels of indigoidine expression, a disruption in *pgaR* suggests this pathway is more directly involved in indigoidine production. However, recent genomic analysis of Y4I suggests that the regulatory mechanisms involved in indigoidine production may act in a hierarchal manner as is the case with *Dinoroseobacter shibae*. In order to elucidate the regulatory networks responsible for the competitive advantage provided by indigoidine in Y4I, I have focused on obtaining AHL synthase (i.e., *phaI* and *pgaI*) mutants and characterizing their phenotype in terms of motility.
 
-##Methods
-###AHL Synthase Mutants
+## Methods
+### AHL Synthase Mutants
 Mutants were generated using the pKNOCK suicide vector system. Using pKNOCK-KmR, we cloned a ~300 bp fragment of our target gene into the vector creating pKNOCK3464. This vector was then transformed into a compepent donor cell, BW20767. The contruct was incorporated into Y4I Through conjugation with the donor strain. Because Y4I does not contain the *pir* gene, an essential gene for pKNOCK replication, the construct will insert into the genome using site specific homologous recombination.   
 
-###Characterization of AHL Synthase Mutants
+### Characterization of AHL Synthase Mutants
 
-####Motility Assays
+#### Motility Assays
 Swimming motility was assessed as previously reported (Cude 2015). Twenty microliters of stationary phase cultures (OD 540 of ~1.5) was spotted onto the motility plates and incubated at 30C in a humidity chamber and scored after 48 h by measuring the diameter of the swim circle. 
 
 
-##Results and Discussion 
+## Results and Discussion 
 Given that quorum sensing has been shown to affect motility in members of the Roseobacter clade, the *phaI*::pKNOCK3464 mutant was assayed for differences in motiltiy and compared to the motility of previously established Y4I mutants. Motility of *phaI*::pKNOCK3464 mutant showed no significant difference when compared to wildtype (p < 0.05). Contrary to previous results, motility of *pgaR*::TN5 was enhanced in soft-agar assays relative to that of the wildtype (p < 0.00001). All mutants showed signs of swimming when viewed microscopically. 
 
 ```{r}

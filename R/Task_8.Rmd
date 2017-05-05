@@ -1,10 +1,8 @@
 ---
 title: "Task 8"
-output: 
- html_document: 
-  keep_md: TRUE
-  html_notebook: default   
-Author: "April Armes""
+Author: "April Armes"
+output: github_document 
+
 ---
 
 ## Write a funtion that fulfills the following criteria: 
@@ -68,51 +66,3 @@ t
 
 
 ```
-
-##Loop and performance metric tasks
-
-  * Write a function named that uses a for loop to calculate the sum of the elements of a vector, which is passed as an argument (i.e., it should do the same thing that sum() does with vectors). your_fun(1:10^4) should return 50005000.
-  
-  * Use the microbenchmark::microbenchmark function to compare the performace of your function to that of sum in adding up the elements of the vector 1:10^4. The benchmarking code should look something like:
-  
-```{r}
-
- test.vec <- 1:10^4
-microbenchmark(
-    my_sum(test.vec),
-    sum(test.vec)
-    )
-
-```
-
-
-```{r}
-#Libraries needed for this script --------------------------------------------------
-library(tidyverse)
-library(dplyr)
-library (microbenchmark)
-
-#This script accomplishes Task 8 part II -------------------------------------------
-fun_loop <- function (x){
-  y <- 0
-  #for each value in x 
-   for(i in x) {
-    #add each neighbor to the next and put it in an object called y
-    y <- y + i 
-  }
-  return (y)
-}
-
-test.vec <- 1:10^4
-fun_loop(test.vec)
-
-#---------------------------------------------------------------------------------------
-
-print (microbenchmark(
-    fun_loop(test.vec),
-    sum(test.vec)
-    )
-)
-
-```
-
